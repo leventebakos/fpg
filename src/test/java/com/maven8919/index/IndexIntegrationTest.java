@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -33,6 +34,13 @@ public class IndexIntegrationTest {
 		String baseUrl = "http://localhost:" + port;
 		browser.get(baseUrl);
 		assertEquals("Start game", browser.findElementByTagName("a").getText());
+	}
+	
+	@Test
+	public void testIndexPageStartGameLinkShouldGoToGameCreationPage() {
+		String baseUrl = "http://localhost:" + port;
+		browser.get(baseUrl);
+		browser.findElement(By.cssSelector("a[href*='game']")).click();
 	}
 
 	@AfterClass
