@@ -29,7 +29,7 @@ public class IndexIntegrationTest {
 	}
 
 	@Test
-	public void testIndexPage() {
+	public void testIndexPageShouldHaveALinkWithStartGameText() {
 		String baseUrl = "http://localhost:" + port;
 		browser.get(baseUrl);
 		assertEquals("Start game", browser.findElementByTagName("a").getText());
