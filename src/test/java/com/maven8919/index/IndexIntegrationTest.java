@@ -32,7 +32,7 @@ public class IndexIntegrationTest {
 	public void testIndexPage() {
 		String baseUrl = "http://localhost:" + port;
 		browser.get(baseUrl);
-		assertEquals("Hello!", browser.findElementByTagName("p").getText());
+		assertEquals("Start game", browser.findElementByTagName("a").getText());
 	}
 
 	@AfterClass
