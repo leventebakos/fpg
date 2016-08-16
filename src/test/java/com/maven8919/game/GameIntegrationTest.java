@@ -45,7 +45,7 @@ public class GameIntegrationTest {
 	
 	@Test
 	public void testGamePageShouldHaveATextInputWithBoyLabel() {
-		assertTrue(browser.findElementById("malePlayerNames").isDisplayed());
+		assertTrue(browser.findElementById("malePlayerName").isDisplayed());
 	}
 
 	@AfterClass
