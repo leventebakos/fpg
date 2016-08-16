@@ -47,8 +47,6 @@ public class GameIntegrationTest {
 	public void testGamePageShouldHaveATextInputWithBoyLabel() {
 		assertTrue(browser.findElementById("malePlayerNames").isDisplayed());
 	}
-	
-	driver.findElement(By.tagName("form")).submit();
 
 	@AfterClass
 	public static void closeBrowser() {
