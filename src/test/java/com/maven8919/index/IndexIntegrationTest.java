@@ -41,6 +41,7 @@ public class IndexIntegrationTest {
 		String baseUrl = "http://localhost:" + port;
 		browser.get(baseUrl);
 		browser.findElement(By.cssSelector("a[href*='game']")).click();
+		assertEquals(baseUrl + "/game", browser.getCurrentUrl());
 	}
 
 	@AfterClass
