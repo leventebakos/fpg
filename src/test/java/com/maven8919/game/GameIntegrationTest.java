@@ -47,6 +47,11 @@ public class GameIntegrationTest {
 	public void testGamePageShouldHaveATextInputWithBoyLabel() {
 		assertTrue(browser.findElementById("malePlayerName").isDisplayed());
 	}
+	
+	@Test
+	public void testGamePageShouldHaveButtonWithStartGameId() {
+		assertTrue(browser.findElementById("startGame").isDisplayed());
+	}
 
 	@AfterClass
 	public static void closeBrowser() {
